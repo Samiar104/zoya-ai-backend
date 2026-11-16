@@ -13,7 +13,6 @@ COPY .env.example ./.env.example
 COPY run.sh ./run.sh
 
 # Data dirs (SQLite file, backups, logs) — mount volumes in production.
-VOLUME ["/app/data", "/app/backups", "/app/logs"]
 ENV DATABASE_URL=sqlite:////app/data/zoya.db \
     BACKUP_DIR=/app/backups
 
