@@ -1,0 +1,43 @@
+# ZOYA AI Backend — Docker Compose (Phase 1)
+# Usage: docker compose up -d --build
+# The API will be on http://localhost:8000 (or behind nginx — see nginx.conf.example).
+services:
+  zoya-backend:
+    build: .
+    container_name: zoya-backend
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    environment:
+      DATABASE_URL: sqlite:////app/data/zoya.db
+      BACKUP_DIR: /app/backups
+    volumes:
+      - zoya-data:/app/data
+      - zoya-backups:/app/backups
+      - zoya-logs:/app/logs
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health')"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+  # Optional PostgreSQL (uncomment to use instead of SQLite):
+  # db:
+  #   image: postgres:16
+  #   container_name: zoya-db
+  #   restart: unless-stopped
+  #   environment:
+  #     POSTGRES_USER: zoya
+  #     POSTGRES_PASSWORD: change-me
+  #     POSTGRES_DB: zoya
+  #   volumes:
+  #     - zoya-pgdata:/var/lib/postgresql/data
+
+volumes:
+  zoya-data:
+  zoya-backups:
+  zoya-logs:
+  # zoya-pgdata:

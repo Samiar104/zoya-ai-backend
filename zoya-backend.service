@@ -1,0 +1,28 @@
+# ZOYA AI Backend — systemd unit for 24/7 hosting on a Linux server.
+# Install:
+#   sudo cp zoya-backend.service /etc/systemd/system/
+#   sudo systemctl daemon-reload
+#   sudo systemctl enable --now zoya-backend
+#   sudo systemctl status zoya-backend
+#   sudo journalctl -u zoya-backend -f
+[Unit]
+Description=ZOYA AI Backend (FastAPI)
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+User=zoya
+Group=zoya
+WorkingDirectory=/opt/zoya/backend
+Environment="PATH=/opt/zoya/backend/.venv/bin:/usr/local/bin:/usr/bin:/bin"
+ExecStart=/opt/zoya/backend/.venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8000
+Restart=always
+RestartSec=5
+StartLimitIntervalSec=60
+StartLimitBurst=5
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

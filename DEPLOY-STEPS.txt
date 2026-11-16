@@ -1,0 +1,40 @@
+ZOYA AI Backend — Render par deploy karne ke steps
+====================================================
+
+STEP 1 — GitHub account (code rakhne ke liye)
+----------------------------------------------
+1. https://github.com par jayein aur free account banayein.
+2. "New repository" banayein, naam: zoya-ai-backend
+3. Is zip ko computer par extract karein, phir repository mein
+   "Add file > Upload files" se saari files upload kar dein.
+
+STEP 2 — Render account (backend chalane ke liye, FREE)
+-------------------------------------------------------
+1. https://render.com par jayein aur free account banayein
+   (GitHub se sign in karna sab se aasan hai).
+2. Dashboard par "New +" > "Web Service" chunein.
+3. Apna GitHub repository "zoya-ai-backend" connect karein.
+4. Render khud render.yaml se settings le lega — bas "Deploy" dabayein.
+   Deploy mein 2-3 minute lagte hain.
+5. Deploy hone ke baad aapko ek link milega, jaise:
+   https://zoya-ai-backend.onrender.com
+   Ye aapke backend ka PUBLIC link hai — ise sambhal kar rakhein.
+
+STEP 3 — Website se login
+--------------------------
+1. Website kholein (Control Center link).
+2. Settings/Login page par Backend URL mein apna Render link daalein:
+   https://zoya-ai-backend.onrender.com
+3. Pehle "Register" se naya account banayein, phir usi se "Login" karein.
+4. API Key Render dashboard mein milegi: Service > Environment >
+   ZOYA_API_KEY ki value.
+
+Zaroori baatein
+---------------
+- FREE service 15 minute khamoshi ke baad so jata hai; pehli request
+  par jaagne mein ~1 minute lagta hai. Ye normal hai.
+- Free plan par data (accounts, yaadein) redeploy par reset ho sakta
+  hai — ye SQLite ki wajah se hai. Hamesha ke liye data chahiye ho to
+  Render par PostgreSQL add karna hoga.
+- Website ka link 18 Nov 2026 shaam 7:53 tak chalega; uske baad
+  naya link lena hoga.
