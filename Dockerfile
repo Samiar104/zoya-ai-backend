@@ -12,7 +12,8 @@ COPY app ./app
 COPY .env.example ./.env.example
 COPY run.sh ./run.sh
 
-# Data dirs (SQLite file, backups, logs) — mount volumes in production.
+# Data dirs (SQLite file, backups, logs) — create them so SQLite can open the DB file.
+RUN mkdir -p /app/data /app/backups /app/logs
 ENV DATABASE_URL=sqlite:////app/data/zoya.db \
     BACKUP_DIR=/app/backups
 
