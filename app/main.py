@@ -9,6 +9,7 @@ import time
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 
 from app.core.config import ensure_api_key, get_settings
 from app.core.database import init_db
@@ -57,17 +58,6 @@ def on_startup() -> None:
     log.info("API docs at /docs — static API key present: %s", bool(key))
 
 
-@app.get("/", tags=["root"])
-def root() -> dict:
-    return {
-        "app": settings.app_name,
-        "version": settings.app_version,
-        "status": "running",
-        "docs": "/docs",
-        "health": "/health",
-    }
-
-
 app.include_router(health.router)
 app.include_router(auth.router)
 app.include_router(devices.router)
@@ -79,3 +69,16 @@ app.include_router(chat.router)
 app.include_router(conversation.router)
 app.include_router(character.router)
 app.include_router(remix_compat.router)
+
+# ZOYA websites, served from the same origin so they open everywhere
+# without CORS and without a separate host. Mounted last so the API
+# routers above keep their routes.
+# NOTE: "/remix" is mounted BEFORE "/" on purpose. Starlette matches
+# mounts in registration order, and the "/" mount is a catch-all — if it
+# were registered first it would swallow "/remix/..." requests and return
+# 404 (there is no "remix" folder inside static/). Registering "/remix"
+# first lets the remix site answer its own paths, and "/" then serves the
+# Control Center for everything else.
+app.mount("/remix", StaticFiles(directory="static-remix", html=True), name="remix-website")
+# ZOYA Control Center website (built React app).
+app.mount("/", StaticFiles(directory="static", html=True), name="website")
