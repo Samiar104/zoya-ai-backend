@@ -9,6 +9,7 @@ import time
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 
 from app.core.config import ensure_api_key, get_settings
 from app.core.database import init_db
@@ -57,17 +58,6 @@ def on_startup() -> None:
     log.info("API docs at /docs — static API key present: %s", bool(key))
 
 
-@app.get("/", tags=["root"])
-def root() -> dict:
-    return {
-        "app": settings.app_name,
-        "version": settings.app_version,
-        "status": "running",
-        "docs": "/docs",
-        "health": "/health",
-    }
-
-
 app.include_router(health.router)
 app.include_router(auth.router)
 app.include_router(devices.router)
@@ -78,3 +68,8 @@ app.include_router(backup.router)
 app.include_router(chat.router)
 app.include_router(conversation.router)
 app.include_router(character.router)
+
+# ZOYA Control Center website (built React app) served from the same origin
+# so the site opens everywhere without CORS and without a separate host.
+# Mounted last so the API routers above keep their routes.
+app.mount("/", StaticFiles(directory="static", html=True), name="website")
