@@ -20,7 +20,7 @@ from pydantic import BaseModel, Field
 
 from app.core.logging import get_logger
 from app.routers.health import health as health_check
-from app.services.conversation import ZoyaBrain
+from app.services.conversation import ZoyaBrain, detect_prompt_language
 
 router = APIRouter(tags=["remix-compat"])
 log = get_logger("zoya.remix_compat")
@@ -66,7 +66,11 @@ def remix_chat(data: RemixChatRequest, request: Request) -> dict:
             status_code=401,
             detail="Missing device handshake (X-Zoya-Device-ID)",
         )
-    language = _language_for(data.language_mode)
+    # Reply in the SAME SCRIPT the user wrote in: a Roman Urdu prompt gets
+    # a Roman Urdu reply (so the Latin-script TTS voice pronounces it
+    # naturally), an Urdu-script prompt gets an Urdu-script reply. The
+    # language_mode is only the fallback for prompts with no letters.
+    language = detect_prompt_language(data.prompt, fallback=_language_for(data.language_mode))
     brain = ZoyaBrain(language=language, mode="companion")
     reply_text, understanding = brain.reply(data.prompt, user_context={}, history=[])
     log.info(

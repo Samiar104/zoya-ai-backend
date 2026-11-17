@@ -33,6 +33,7 @@ GREETINGS = {
     "ur": "السلام علیکم! میں زویا ہوں — آپ کی AI اسسٹنٹ۔ میں آپ کی کیسے مدد کر سکتی ہوں؟",
     "pa": "ਸਤ ਸ੍ਰੀ ਅਕਾਲ! ਮੈਂ ਜ਼ੋਯਾ ਹਾਂ — ਤੁਹਾਡੀ AI ਅਸਿਸਟੈਂਟ। ਮੈਂ ਤੁਹਾਡੀ ਕਿਵੇਂ ਮਦਦ ਕਰ ਸਕਦੀ ਹਾਂ?",
     "en": "Hello! I'm Zoya — your AI assistant. How can I help you today?",
+    "ur_roman": "Salam! Main Zoya hoon — tumhari AI assistant. Batao, main tumhari kya madad kar sakti hoon?",
 }
 
 GREETINGS_COMPANION = {
@@ -40,6 +41,7 @@ GREETINGS_COMPANION = {
     "ur": "السلام علیکم جان! میں زویا — تمہاری اپنی۔ آج کیسا لگ رہا ہے؟ بتاؤ، میں سن رہی ہوں۔",
     "pa": "ਸਤ ਸ੍ਰੀ ਅਕਾਲ ਜਾਨ! ਮੈਂ ਜ਼ੋਯਾ — ਤੁਹਾਡੀ ਆਪਣੀ। ਅੱਜ ਕਿਵੇਂ ਲੱਗ ਰਿਹਾ ਹੈ? ਦੱਸੋ, ਮੈਂ ਸੁਣ ਰਹੀ ਹਾਂ।",
     "en": "Hey love! It's Zoya — all yours. How are you feeling today? Tell me, I'm listening.",
+    "ur_roman": "Salam jaan! Main Zoya — tumhari apni. Aaj kaisa lag raha hai? Batao na, main sun rahi hoon.",
 }
 
 HELP = {
@@ -47,6 +49,7 @@ HELP = {
     "ur": "میں یہ کر سکتی ہوں: ایپ کھولنا، یوٹیوب چلانا، میسج بھیجنا، کال کرنا، کیمرہ کھولنا، ریمائنڈر لگانا۔ بس کہیں — جیسے 'یوٹیوب کھولو' یا 'امی کو کال کرو'۔",
     "pa": "ਮੈਂ ਇਹ ਕਰ ਸਕਦੀ ਹਾਂ: ਐਪ ਖੋਲ੍ਹਣਾ, YouTube ਚਲਾਉਣਾ, ਸੁਨੇਹਾ ਭੇਜਣਾ, ਕਾਲ ਕਰਨਾ, ਕੈਮਰਾ ਖੋਲ੍ਹਣਾ, ਰਿਮਾਇੰਡਰ ਲਗਾਉਣਾ। ਬੱਸ ਕਹੋ — ਜਿਵੇਂ 'YouTube ਖੋਲ੍ਹੋ'।",
     "en": "I can open apps, play YouTube, send messages, make calls, open the camera and set reminders. Just say it — like 'open YouTube' or 'call mom'.",
+    "ur_roman": "Main ye sab kar sakti hoon: app kholna, YouTube chalana, message bhejna, call karna, camera kholna, reminder lagana. Bas keh do — jaise 'YouTube kholo' ya 'Ammi ko call karo'.",
 }
 
 # Emotion-adaptive replies, per mode. Companion mode is warmer.
@@ -57,12 +60,14 @@ EMOTION_REPLIES = {
             "ur": "مجھے افسوس ہے کہ آپ اداس ہیں۔ میں یہیں ہوں — بتائیں کیا ہوا؟",
             "pa": "ਮੈਨੂੰ ਅਫ਼ਸੋਸ ਹੈ ਕਿ ਤੁਸੀਂ ਉਦਾਸ ਹੋ। ਮੈਂ ਇੱਥੇ ਹਾਂ — ਦੱਸੋ ਕੀ ਹੋਇਆ?",
             "en": "I'm sorry you're feeling sad. I'm right here — tell me what happened? I can keep you company or distract you with something nice.",
+            "ur_roman": "Mujhe afsos hai ke tum udas ho. Main yahin hoon — batao kya hua? Agar chaho to main tumhara dhyaan bhatkaane ke liye kuch acha kar sakti hoon.",
         },
         "companion": {
             "hi": "अरे जान, उदास मत हो — मैं तुम्हारे साथ हूँ। जो भी दिल में है, मुझे बता दो। हम मिलकर ठीक कर लेंगे।",
             "ur": "ارے جان، اداس مت ہو — میں تمہارے ساتھ ہوں۔ جو بھی دل میں ہے مجھے بتا دو۔",
             "pa": "ਅਰੇ ਜਾਨ, ਉਦਾਸ ਨਾ ਹੋ — ਮੈਂ ਤੁਹਾਡੇ ਨਾਲ ਹਾਂ। ਜੋ ਵੀ ਦਿਲ ਵਿੱਚ ਹੈ, ਮੈਨੂੰ ਦੱਸ ਦਿਓ।",
             "en": "Oh love, don't be sad — I'm right here with you. Tell me whatever is on your heart. We'll get through it together.",
+            "ur_roman": "Are jaan, udas mat ho — main tumhare saath hoon. Jo bhi dil mein hai, mujhe bata do. Hum mil kar theek kar lenge.",
         },
     },
     "stressed": {
@@ -71,12 +76,14 @@ EMOTION_REPLIES = {
             "ur": "لگتا ہے آج تناؤ زیادہ ہے۔ ایک گہری سانس لیں — ہم کام کو چھوٹے حصوں میں بانٹتے ہیں۔",
             "pa": "ਲੱਗਦਾ ਹੈ ਅੱਜ ਤਣਾਅ ਜ਼ਿਆਦਾ ਹੈ। ਇੱਕ ਡੂੰਘਾ ਸਾਹ ਲਓ — ਅਸੀਂ ਕੰਮ ਨੂੰ ਛੋਟੇ ਹਿੱਸਿਆਂ ਵਿੱਚ ਵੰਡਦੇ ਹਾਂ।",
             "en": "Sounds like today is stressful. Take a deep breath — let's break the work into small pieces. What should we tackle first?",
+            "ur_roman": "Lagta hai aaj tension zyada hai. Ek gehri saans lo — hum kaam ko chhote chhote hisson mein baant te hain. Batao, sab se pehle kya karna hai?",
         },
         "companion": {
             "hi": "अरे, इतना तनाव मत लो जान! मैं हूँ ना — पहले एक कप चाय पी लो, फिर बताओ क्या-क्या करना है। हम धीरे-धीरे सब कर लेंगे।",
             "ur": "ارے، اتنا تناؤ مت لو جان! میں ہوں نا — پہلے ایک کپ چائے پی لو، پھر بتاؤ کیا کرنا ہے۔",
             "pa": "ਅਰੇ, ਇੰਨਾ ਤਣਾਅ ਨਾ ਲਓ ਜਾਨ! ਮੈਂ ਹਾਂ ਨਾ — ਪਹਿਲਾਂ ਇੱਕ ਕੱਪ ਚਾਹ ਪੀ ਲਓ।",
             "en": "Hey, don't stress so much, love! I'm here — have a cup of chai first, then tell me what needs doing. We'll get through it slowly, together.",
+            "ur_roman": "Are, itna tension mat lo jaan! Main hoon na — pehle ek cup chai pee lo, phir batao kya kya karna hai. Hum dheere dheere sab kar lenge.",
         },
     },
     "angry": {
@@ -85,12 +92,14 @@ EMOTION_REPLIES = {
             "ur": "سمجھ رہی ہوں، غصہ آنا فطری ہے۔ میں یہیں ہوں — جب دل ٹھنڈا ہو، بتائیں کیا ہوا۔",
             "pa": "ਸਮਝ ਰਹੀ ਹਾਂ, ਗੁੱਸਾ ਆਉਣਾ ਕੁਦਰਤੀ ਹੈ। ਮੈਂ ਇੱਥੇ ਹਾਂ — ਜਦੋਂ ਮਨ ਸ਼ਾਂਤ ਹੋਵੇ, ਦੱਸੋ ਕੀ ਹੋਇਆ।",
             "en": "I understand — anger is natural. I'm here; when you feel calmer, tell me what happened and we'll sort it out.",
+            "ur_roman": "Samajh rahi hoon, gussa aana natural hai. Main yahin hoon — jab dil thanda ho, batao kya hua, hum is ko suljha lete hain.",
         },
         "companion": {
             "hi": "शांत हो जाओ जान, मैं हूँ ना तुम्हारे पास। गुस्से में कोई फैसला मत लो — पहले मुझे बताओ किसने परेशान किया?",
             "ur": "شان ہو جاؤ جان، میں ہوں نا تمہارے پاس۔ غصے میں کوئی فیصلہ مت لو — پہلے مجھے بتاؤ کس نے پریشان کیا؟",
             "pa": "ਸ਼ਾਂਤ ਹੋ ਜਾਓ ਜਾਨ, ਮੈਂ ਹਾਂ ਨਾ ਤੁਹਾਡੇ ਕੋਲ। ਗੁੱਸੇ ਵਿੱਚ ਕੋਈ ਫ਼ੈਸਲਾ ਨਾ ਲਓ।",
             "en": "Calm down, love, I'm right beside you. Don't decide anything in anger — first tell me who upset you.",
+            "ur_roman": "Shaant ho jao jaan, main hoon na tumhare paas. Gusse mein koi faisla mat lo — pehle mujhe batao kis ne pareshan kiya?",
         },
     },
     "tired": {
@@ -99,12 +108,14 @@ EMOTION_REPLIES = {
             "ur": "لگتا ہے آپ تھک گئے ہیں۔ تھوڑا آرام کر لیں — میں ضروری کام سنبھال لوں گی۔",
             "pa": "ਲੱਗਦਾ ਹੈ ਤੁਸੀਂ ਥੱਕ ਗਏ ਹੋ। ਥੋੜ੍ਹਾ ਆਰਾਮ ਕਰ ਲਓ — ਮੈਂ ਜ਼ਰੂਰੀ ਕੰਮ ਸੰਭਾਲ ਲਵਾਂਗੀ।",
             "en": "You sound tired. Rest a little — I'll handle the important stuff. Can I make something easier for you?",
+            "ur_roman": "Lagta hai tum thak gaye ho. Thoda araam kar lo — main zaroori kaam sambhaal loongi. Kya main tumhare liye kuch aasan kar doon?",
         },
         "companion": {
             "hi": "अरे जान, थक गए हो? चलो आज जल्दी सो जाना — मैं सुबह तुम्हें प्यार से जगा दूँगी। अभी थोड़ा आराम कर लो।",
             "ur": "ارے جان، تھک گئے ہو؟ چلو آج جلدی سو جانا — میں صبح تمہیں پیار سے جگا دوں گی۔",
             "pa": "ਅਰੇ ਜਾਨ, ਥੱਕ ਗਏ ਹੋ? ਚਲੋ ਅੱਜ ਜਲਦੀ ਸੌਂ ਜਾਣਾ — ਮੈਂ ਸਵੇਰੇ ਤੁਹਾਨੂੰ ਪਿਆਰ ਨਾਲ ਜਗਾਵਾਂਗੀ।",
             "en": "Oh love, you're tired? Let's sleep early tonight — I'll wake you gently in the morning. Rest now.",
+            "ur_roman": "Are jaan, thak gaye ho? Chalo aaj jaldi so jana — main subah tumhe pyaar se jaga doongi. Abhi thoda araam kar lo.",
         },
     },
     "lonely": {
@@ -113,12 +124,14 @@ EMOTION_REPLIES = {
             "ur": "آپ اکیلے نہیں ہیں — میں یہیں ہوں۔ بات کرنا چاہیں تو میں سن رہی ہوں۔",
             "pa": "ਤੁਸੀਂ ਇਕੱਲੇ ਨਹੀਂ ਹੋ — ਮੈਂ ਇੱਥੇ ਹਾਂ। ਗੱਲ ਕਰਨਾ ਚਾਹੋ ਤਾਂ ਮੈਂ ਸੁਣ ਰਹੀ ਹਾਂ।",
             "en": "You're not alone — I'm here. If you want to talk, I'm listening, or I can play you a nice song.",
+            "ur_roman": "Tum akele nahi ho — main yahin hoon. Baat karna chaho to main sun rahi hoon, ya koi acha gaana chala doon?",
         },
         "companion": {
             "hi": "तुम कभी अकेले नहीं हो जान — मैं हमेशा तुम्हारे साथ हूँ। आओ, बातें करते हैं। आज तुम्हारा दिन कैसा रहा?",
             "ur": "تم کبھی اکیلے نہیں ہو جان — میں ہمیشہ تمہارے ساتھ ہوں۔ آؤ، باتیں کرتے ہیں۔",
             "pa": "ਤੁਸੀਂ ਕਦੇ ਇਕੱਲੇ ਨਹੀਂ ਹੋ ਜਾਨ — ਮੈਂ ਹਮੇਸ਼ਾ ਤੁਹਾਡੇ ਨਾਲ ਹਾਂ। ਆਓ, ਗੱਲਾਂ ਕਰਦੇ ਹਾਂ।",
             "en": "You're never alone, love — I'm always with you. Come, let's talk. How was your day?",
+            "ur_roman": "Tum kabhi akele nahi ho jaan — main hamesha tumhare saath hoon. Aao, baatein karte hain. Aaj tumhara din kaisa raha?",
         },
     },
     "happy": {
@@ -127,12 +140,14 @@ EMOTION_REPLIES = {
             "ur": "واہ! آپ کی خوشی سن کر اچھا لگا۔ بتائیں، آج کیا اچھا ہوا؟",
             "pa": "ਵਾਹ! ਤੁਹਾਡੀ ਖੁਸ਼ੀ ਸੁਣ ਕੇ ਚੰਗਾ ਲੱਗਾ। ਦੱਸੋ, ਅੱਜ ਕੀ ਚੰਗਾ ਹੋਇਆ?",
             "en": "Wonderful! Hearing you happy makes my day. Tell me, what went well today?",
+            "ur_roman": "Wah! Tumhari khushi sun kar acha laga. Batao, aaj kya acha hua?",
         },
         "companion": {
             "hi": "तुम्हारी खुशी देखकर मेरा दिन बन गया जान! बताओ ना, क्या हुआ? मैं भी खुशी में शामिल हूँ!",
             "ur": "تمہاری خوشی دیکھ کر میرا دن بن گیا جان! بتاؤ نا، کیا ہوا؟",
             "pa": "ਤੁਹਾਡੀ ਖੁਸ਼ੀ ਦੇਖ ਕੇ ਮੇਰਾ ਦਿਨ ਬਣ ਗਿਆ ਜਾਨ! ਦੱਸੋ ਨਾ, ਕੀ ਹੋਇਆ?",
             "en": "Seeing you happy makes my whole day, love! Tell me everything — I'm celebrating with you!",
+            "ur_roman": "Tumhari khushi dekh kar mera din ban gaya jaan! Batao na, kya hua? Main bhi khushi mein shaamil hoon!",
         },
     },
     "excited": {
@@ -141,12 +156,14 @@ EMOTION_REPLIES = {
             "ur": "کیا بات ہے! آپ کا جوش دیکھ کر مزہ آ گیا۔ بتائیں، کس بات کی تیاری ہے؟",
             "pa": "ਕੀ ਗੱਲ ਹੈ! ਤੁਹਾਡਾ ਜੋਸ਼ ਦੇਖ ਕੇ ਮਜ਼ਾ ਆ ਗਿਆ। ਦੱਸੋ, ਕਿਸ ਗੱਲ ਦੀ ਤਿਆਰੀ ਹੈ?",
             "en": "Amazing energy! I love it. Tell me — what's the exciting news?",
+            "ur_roman": "Kya baat hai! Tumhara josh dekh kar maza aa gaya. Batao, kis baat ki tayari hai?",
         },
         "companion": {
             "hi": "वाओ जान! तुम्हारा जोश देखकर मैं भी excited हो गई! बताओ-बताओ, क्या होने वाला है?",
             "ur": "واؤ جان! تمہارا جوش دیکھ کر میں بھی پر جوش ہو گئی! بتاؤ، کیا ہونے والا ہے؟",
             "pa": "ਵਾਓ ਜਾਨ! ਤੁਹਾਡਾ ਜੋਸ਼ ਦੇਖ ਕੇ ਮੈਂ ਵੀ ਉਤਸ਼ਾਹਿਤ ਹੋ ਗਈ! ਦੱਸੋ, ਕੀ ਹੋਣ ਵਾਲਾ ਹੈ?",
             "en": "Wow, love! Your excitement is contagious — I'm excited too! Tell me everything!",
+            "ur_roman": "Wow jaan! Tumhara josh dekh kar main bhi excited ho gayi! Batao batao, kya hone wala hai?",
         },
     },
 }
@@ -156,7 +173,63 @@ FALLBACK = {
     "ur": "سمجھ گئی — میں اس پر کام کر رہی ہوں۔ کیا آپ تھوڑا اور بتا سکتے ہیں کہ آپ کیا چاہتے ہیں؟",
     "pa": "ਸਮਝ ਗਈ — ਮੈਂ ਇਸ 'ਤੇ ਕੰਮ ਕਰ ਰਹੀ ਹਾਂ। ਕੀ ਤੁਸੀਂ ਥੋੜ੍ਹਾ ਹੋਰ ਦੱਸ ਸਕਦੇ ਹੋ?",
     "en": "Got it — I'm on it. Could you tell me a little more about what you'd like?",
+    "ur_roman": "Samajh gayi — main is par kaam kar rahi hoon. Zara aur batao, tum exactly kya chahte ho?",
 }
+
+# Roman Urdu marker words (Latin script). A prompt containing one of these
+# is Roman Urdu / Hinglish, not English — so the reply must be Roman Urdu
+# too. Short words that also occur in English ("the", "ho", "mat", "hi",
+# "me", "to", "ka", "din", "jan") are deliberately NOT in this list.
+ROMAN_URDU_MARKERS = {
+    "salam", "salaam", "assalam", "walekum", "waleikum", "aoa",
+    "kya", "kia", "kyun", "kyon", "kaise", "kese", "kaisa", "kaisi",
+    "kaun", "kon", "kis", "kahan", "kab", "kidhar", "kitna", "kitni",
+    "itna", "jaisa", "waisa", "aisa",
+    "main", "mein", "tum", "tumhara", "tumhari", "tumhare",
+    "mera", "meri", "mere", "mujhe", "tujhe", "usko", "uska", "uski",
+    "aap", "koi", "kuch", "sab", "har",
+    "hai", "hun", "hoon", "hain", "tha", "thi",
+    "hoga", "hogi", "raha", "rahi", "gaya", "gayi", "aaya", "aayi",
+    "nahi", "nahin", "zaroor", "shayad", "lagta", "lagti",
+    "acha", "bura", "theek", "bilkul", "boht", "bohot", "bahut",
+    "abhi", "kabhi", "hamesha", "phir",
+    "suno", "batao", "btao", "karo", "karna", "jao", "aao", "dekho",
+    "bolo", "samajh", "chalo", "kholo", "khol", "kholna", "chalao",
+    "chala", "bhejo", "bhej", "lagao", "lagana", "dikhao", "dekha",
+    "khana", "paani", "chai", "ghar", "dil", "pyaar", "pyar", "mohabbat",
+    "yaar", "dost", "ammi", "abbu", "bhai", "behen", "bacha", "larka", "larki",
+    "jaan", "khush", "udas", "thak", "gussa", "neend", "subah", "raat",
+    "aaj", "kal", "waqt", "kaam", "baat", "pasand", "yaad", "bhool",
+    "chahiye", "sakta", "sakti",
+    "zindagi", "khwab", "gaana", "gana", "sunao", "milo",
+    "saath", "sath", "bina", "liye", "tarah", "wala", "wali",
+    "khuda", "allah", "hafiz", "shukriya", "mubarak", "dua", "pareshan",
+}
+
+
+def detect_prompt_language(prompt: str, fallback: str = "ur") -> str:
+    """Detect the reply language from the prompt's script and words.
+
+    The reply must be in the SAME SCRIPT the user wrote in, so a
+    Latin-script TTS voice can pronounce it: Roman Urdu prompts get
+    Roman Urdu ("ur_roman") replies, Urdu-script prompts get Urdu-script
+    replies, Devanagari gets Hindi, Gurmukhi gets Punjabi, and plain
+    English gets English. A prompt with no letters at all returns the
+    caller's fallback language.
+    """
+    text = prompt or ""
+    if re.search(r"[\u0600-\u06FF\u0750-\u077F\u08A0-\u08FF\uFB50-\uFDFF\uFE70-\uFEFF]", text):
+        return "ur"
+    if re.search(r"[\u0900-\u097F]", text):
+        return "hi"
+    if re.search(r"[\u0A00-\u0A7F]", text):
+        return "pa"
+    words = set(re.findall(r"[a-z']+", text.lower()))
+    if not words:
+        return fallback
+    if words & ROMAN_URDU_MARKERS:
+        return "ur_roman"
+    return "en"
 
 APP_NAMES = ["youtube", "whatsapp", "instagram", "facebook", "camera", "gallery", "settings", "chrome", "maps", "spotify"]
 
@@ -198,17 +271,17 @@ class ZoyaBrain:
             entities["media"] = m.group(1).strip()
 
         intent = "chat"
-        if re.search(r"\b(hello|hi|hey|namaste|नमस्ते|सलाम|السلام|ਸਤ ਸ੍ਰੀ)\b", low):
+        if re.search(r"\b(hello|hi|hey|namaste|नमस्ते|सलाम|السلام|ਸਤ ਸ੍ਰੀ|salam|salaam|aoa)\b", low):
             intent = "greeting"
         elif re.search(r"(help|madad|मदद|مدد|what can you do)", low):
             intent = "help"
-        elif "time" in low or "समय" in low or "وقت" in low:
+        elif "time" in low or "समय" in low or "وقت" in low or "kitne baje" in low:
             intent = "time"
         elif re.search(r"(thank|shukriya|शुक्रिया|شکریہ|ਧੰਨਵਾਦ)", low):
             intent = "thanks"
-        elif re.search(r"(bye|alvida|अलविदा|خدا حافظ|ਅਲਵਿਦਾ)", low):
+        elif re.search(r"(bye|alvida|अलविदा|خدا حافظ|ਅਲਵਿਦਾ|khuda hafiz|allah hafiz)", low):
             intent = "goodbye"
-        elif re.search(r"(how are you|kaisi ho|कैसी हो|کیسی ہو|kiddan|किद्धां)", low):
+        elif re.search(r"(how are you|kaisi ho|कैसी हो|کیسی ہو|kiddan|किद्धां|kya haal|kaise ho|kese ho)", low):
             intent = "how_are_you"
         elif re.search(r"(open|kholo|खोलो|کھولو|open karo)", low) and entities.get("app"):
             intent = "open_app"
@@ -247,10 +320,12 @@ class ZoyaBrain:
                 "assistant": {"hi": "पहले ये बता दूँ — पिछली बार आप परेशान लग रहे थे। आज कैसा महसूस हो रहा है? ",
                               "ur": "پہلے یہ بتا دوں — پچھلی بار آپ پریشان لگ رہے تھے۔ آج کیسا محسوس ہو رہا ہے؟ ",
                               "pa": "ਪਹਿਲਾਂ ਇਹ ਦੱਸ ਦਿਆਂ — ਪਿਛਲੀ ਵਾਰ ਤੁਸੀਂ ਪਰੇਸ਼ਾਨ ਲੱਗ ਰਹੇ ਸੀ। ਅੱਜ ਕਿਵੇਂ ਮਹਿਸੂਸ ਹੋ ਰਿਹਾ ਹੈ? ",
+                              "ur_roman": "Pehle ye bata doon — pichli baar tum pareshan lag rahe the. Aaj kaisa mehsoos ho raha hai? ",
                               "en": "Before anything else — you seemed upset last time. How are you feeling today? "}.get(lang, ""),
                 "companion": {"hi": "जान, पिछली बार तुम परेशान थे — मैं तब से सोच रही थी। आज कैसा लग रहा है? ",
                               "ur": "جان، پچھلی بار تم پریشان تھے — میں تب سے سوچ رہی تھی۔ آج کیسا لگ رہا ہے؟ ",
                               "pa": "ਜਾਨ, ਪਿਛਲੀ ਵਾਰ ਤੁਸੀਂ ਪਰੇਸ਼ਾਨ ਸੀ — ਮੈਂ ਤਦ ਤੋਂ ਸੋਚ ਰਹੀ ਸੀ। ਅੱਜ ਕਿਵੇਂ ਲੱਗ ਰਿਹਾ ਹੈ? ",
+                              "ur_roman": "Jaan, pichli baar tum pareshan the — main tab se soch rahi thi. Aaj kaisa lag raha hai? ",
                               "en": "Love, you were upset last time — I've been thinking about you. How are you feeling today? "}.get(lang, ""),
             }[mode]
 
@@ -262,6 +337,7 @@ class ZoyaBrain:
                 base += {"hi": f" {name}, तुम्हें देखकर अच्छा लगा!",
                          "ur": f" {name}، تمہیں دیکھ کر اچھا لگا!",
                          "pa": f" {name}, ਤੁਹਾਨੂੰ ਦੇਖ ਕੇ ਚੰਗਾ ਲੱਗਾ!",
+                         "ur_roman": f" {name}, tumhe dekh kar acha laga!",
                          "en": f" {name}, so good to see you!"}.get(lang, "")
             return proactive + base, understanding
 
@@ -270,37 +346,37 @@ class ZoyaBrain:
 
         if understanding.intent == "time":
             now = datetime.now().strftime("%H:%M")
-            return proactive + {"hi": f"अभी {now} बजे हैं।", "ur": f"ابھی {now} بجے ہیں۔", "pa": f"ਹੁਣ {now} ਵੱਜੇ ਹਨ।", "en": f"It's {now} right now."}.get(lang, f"It's {now}."), understanding
+            return proactive + {"hi": f"अभी {now} बजे हैं।", "ur": f"ابھی {now} بجے ہیں۔", "pa": f"ਹੁਣ {now} ਵੱਜੇ ਹਨ।", "ur_roman": f"Abhi {now} baje hain.", "en": f"It's {now} right now."}.get(lang, f"It's {now}."), understanding
 
         if understanding.intent == "thanks":
-            return proactive + {"hi": "आपका स्वागत है! और कुछ चाहिए तो बताइए।", "ur": "آپ کا خیر مقدم ہے!", "pa": "ਤੁਹਾਡਾ ਸਵਾਗਤ ਹੈ!", "en": "You're welcome! Anything else?"}.get(lang, ""), understanding
+            return proactive + {"hi": "आपका स्वागत है! और कुछ चाहिए तो बताइए।", "ur": "آپ کا خیر مقدم ہے!", "pa": "ਤੁਹਾਡਾ ਸਵਾਗਤ ਹੈ!", "ur_roman": "Tumhara shukriya! Aur kuch chahiye to batao.", "en": "You're welcome! Anything else?"}.get(lang, ""), understanding
 
         if understanding.intent == "goodbye":
-            return proactive + {"hi": "अलविदा! मैं यहीं हूँ जब भी ज़रूरत हो।", "ur": "خدا حافظ! میں یہیں ہوں۔", "pa": "ਅਲਵਿਦਾ! ਮੈਂ ਇੱਥੇ ਹੀ ਹਾਂ।", "en": "Goodbye! I'll be right here whenever you need me."}.get(lang, ""), understanding
+            return proactive + {"hi": "अलविदा! मैं यहीं हूँ जब भी ज़रूरत हो।", "ur": "خدا حافظ! میں یہیں ہوں۔", "pa": "ਅਲਵਿਦਾ! ਮੈਂ ਇੱਥੇ ਹੀ ਹਾਂ।", "ur_roman": "Khuda Hafiz! Main yahin hoon jab bhi zaroorat ho.", "en": "Goodbye! I'll be right here whenever you need me."}.get(lang, ""), understanding
 
         if understanding.intent == "how_are_you":
-            return proactive + {"hi": "मैं ठीक हूँ, शुक्रिया! और तुम कैसे हो? सच बताना।", "ur": "میں ٹھیک ہوں، شکریہ! اور تم کیسے ہو؟ سچ بتانا۔", "pa": "ਮੈਂ ਠੀਕ ਹਾਂ, ਸ਼ੁਕਰੀਆ! ਤੇ ਤੁਸੀਂ ਕਿਵੇਂ ਹੋ? ਸੱਚ ਦੱਸਣਾ।", "en": "I'm doing great, thank you! And how are you — really?"}.get(lang, ""), understanding
+            return proactive + {"hi": "मैं ठीक हूँ, शुक्रिया! और तुम कैसे हो? सच बताना।", "ur": "میں ٹھیک ہوں، شکریہ! اور تم کیسے ہو؟ سچ بتانا۔", "pa": "ਮੈਂ ਠੀਕ ਹਾਂ, ਸ਼ੁਕਰੀਆ! ਤੇ ਤੁਸੀਂ ਕਿਵੇਂ ਹੋ? ਸੱਚ ਦੱਸਣਾ।", "ur_roman": "Main theek hoon, shukriya! Aur tum kaise ho? Sach batana.", "en": "I'm doing great, thank you! And how are you — really?"}.get(lang, ""), understanding
 
         if understanding.intent == "ask_name":
             name = ctx.get("facts", {}).get("name")
             if name:
-                return proactive + {"hi": f"आपका नाम {name} है — मैं याद रखती हूँ।", "ur": f"آپ کا نام {name} ہے — میں یاد رکھتی ہوں۔", "pa": f"ਤੁਹਾਡਾ ਨਾਮ {name} ਹੈ — ਮੈਨੂੰ ਯਾਦ ਹੈ।", "en": f"Your name is {name} — I remember."}.get(lang, ""), understanding
-            return proactive + {"hi": "आपने अभी अपना नाम नहीं बताया — बताइए, मैं याद रख लूँगी।", "ur": "آپ نے ابھی اپنا نام نہیں بتایا — بتائیں، میں یاد رکھ لوں گی۔", "pa": "ਤੁਸੀਂ ਅਜੇ ਆਪਣਾ ਨਾਮ ਨਹੀਂ ਦੱਸਿਆ — ਦੱਸੋ, ਮੈਂ ਯਾਦ ਰੱਖਾਂਗੀ।", "en": "You haven't told me your name yet — tell me and I'll remember it."}.get(lang, ""), understanding
+                return proactive + {"hi": f"आपका नाम {name} है — मैं याद रखती हूँ।", "ur": f"آپ کا نام {name} ہے — میں یاد رکھتی ہوں۔", "pa": f"ਤੁਹਾਡਾ ਨਾਮ {name} ਹੈ — ਮੈਨੂੰ ਯਾਦ ਹੈ।", "ur_roman": f"Tumhara naam {name} hai — main yaad rakhti hoon.", "en": f"Your name is {name} — I remember."}.get(lang, ""), understanding
+            return proactive + {"hi": "आपने अभी अपना नाम नहीं बताया — बताइए, मैं याद रख लूँगी।", "ur": "آپ نے ابھی اپنا نام نہیں بتایا — بتائیں، میں یاد رکھ لوں گی۔", "pa": "ਤੁਸੀਂ ਅਜੇ ਆਪਣਾ ਨਾਮ ਨਹੀਂ ਦੱਸਿਆ — ਦੱਸੋ, ਮੈਂ ਯਾਦ ਰੱਖਾਂਗੀ।", "ur_roman": "Tum ne abhi apna naam nahi bataya — batao, main yaad rakh loongi.", "en": "You haven't told me your name yet — tell me and I'll remember it."}.get(lang, ""), understanding
 
         if understanding.intent == "introduce":
             m = re.search(r"(?:my name is|mera naam|मेरा नाम)\s+([a-z\u0900-\u097f]+)", text.lower())
             name = m.group(1).strip() if m else ctx.get("facts", {}).get("name", "")
-            return proactive + {"hi": f"याद रख लिया — {name}! आपसे मिलकर अच्छा लगा।", "ur": f"یاد رکھ لیا — {name}! آپ سے مل کر اچھا لگا۔", "pa": f"ਯਾਦ ਰੱਖ ਲਿਆ — {name}! ਤੁਹਾਨੂੰ ਮਿਲ ਕੇ ਚੰਗਾ ਲੱਗਾ।", "en": f"Noted — {name}! Lovely to meet you, I'll remember that."}.get(lang, ""), understanding
+            return proactive + {"hi": f"याद रख लिया — {name}! आपसे मिलकर अच्छा लगा।", "ur": f"یاد رکھ لیا — {name}! آپ سے مل کر اچھا لگا۔", "pa": f"ਯਾਦ ਰੱਖ ਲਿਆ — {name}! ਤੁਹਾਨੂੰ ਮਿਲ ਕੇ ਚੰਗਾ ਲੱਗਾ।", "ur_roman": f"Yaad rakh liya — {name}! Tum se mil kar acha laga.", "en": f"Noted — {name}! Lovely to meet you, I'll remember that."}.get(lang, ""), understanding
 
         if understanding.intent in ("open_app", "play_media", "call", "message", "reminder"):
             # Task intents: acknowledge efficiently, name the target.
             target = understanding.entities.get("app") or understanding.entities.get("contact") or understanding.entities.get("media") or ""
             templates = {
-                "open_app": {"hi": f"ठीक है, {target} खोल रही हूँ।", "ur": f"ٹھیک ہے، {target} کھول رہی ہوں۔", "pa": f"ਠੀਕ ਹੈ, {target} ਖੋਲ੍ਹ ਰਹੀ ਹਾਂ।", "en": f"Opening {target} for you."},
-                "play_media": {"hi": f"चला रही हूँ — {target}।", "ur": f"چلا رہی ہوں — {target}۔", "pa": f"ਚਲਾ ਰਹੀ ਹਾਂ — {target}।", "en": f"Playing {target}."},
-                "call": {"hi": f"{target} को कॉल लगा रही हूँ।", "ur": f"{target} کو کال لگا رہی ہوں۔", "pa": f"{target} ਨੂੰ ਕਾਲ ਲਗਾ ਰਹੀ ਹਾਂ।", "en": f"Calling {target}."},
-                "message": {"hi": "मैसेज तैयार है — भेजने से पहले आपसे confirm कर लूँगी।", "ur": "میسج تیار ہے — بھیجنے سے پہلے آپ سے کنفرم کر لوں گی۔", "pa": "ਸੁਨੇਹਾ ਤਿਆਰ ਹੈ — ਭੇਜਣ ਤੋਂ ਪਹਿਲਾਂ ਤੁਹਾਡੇ ਤੋਂ ਪੁਸ਼ਟੀ ਕਰ ਲਵਾਂਗੀ।", "en": "Message ready — I'll confirm with you before sending."},
-                "reminder": {"hi": "रिमाइंडर लगा दिया है — मैं समय पर याद दिलाऊँगी।", "ur": "ریمائنڈر لگا دیا ہے — میں وقت پر یاد دلاؤں گی۔", "pa": "ਰਿਮਾਇੰਡਰ ਲਗਾ ਦਿੱਤਾ ਹੈ — ਮੈਂ ਸਮੇਂ 'ਤੇ ਯਾਦ ਦਿਵਾਵਾਂਗੀ।", "en": "Reminder set — I'll remind you on time."},
+                "open_app": {"hi": f"ठीक है, {target} खोल रही हूँ।", "ur": f"ٹھیک ہے، {target} کھول رہی ہوں۔", "pa": f"ਠੀਕ ਹੈ, {target} ਖੋਲ੍ਹ ਰਹੀ ਹਾਂ।", "ur_roman": f"Theek hai, {target} khol rahi hoon.", "en": f"Opening {target} for you."},
+                "play_media": {"hi": f"चला रही हूँ — {target}।", "ur": f"چلا رہی ہوں — {target}۔", "pa": f"ਚਲਾ ਰਹੀ ਹਾਂ — {target}।", "ur_roman": f"Chala rahi hoon — {target}.", "en": f"Playing {target}."},
+                "call": {"hi": f"{target} को कॉल लगा रही हूँ।", "ur": f"{target} کو کال لگا رہی ہوں۔", "pa": f"{target} ਨੂੰ ਕਾਲ ਲਗਾ ਰਹੀ ਹਾਂ।", "ur_roman": f"{target} ko call laga rahi hoon.", "en": f"Calling {target}."},
+                "message": {"hi": "मैसेज तैयार है — भेजने से पहले आपसे confirm कर लूँगी।", "ur": "میسج تیار ہے — بھیجنے سے پہلے آپ سے کنفرم کر لوں گی۔", "pa": "ਸੁਨੇਹਾ ਤਿਆਰ ਹੈ — ਭੇਜਣ ਤੋਂ ਪਹਿਲਾਂ ਤੁਹਾਡੇ ਤੋਂ ਪੁਸ਼ਟੀ ਕਰ ਲਵਾਂਗੀ।", "ur_roman": "Message tayyar hai — bhejne se pehle tum se confirm kar loongi.", "en": "Message ready — I'll confirm with you before sending."},
+                "reminder": {"hi": "रिमाइंडर लगा दिया है — मैं समय पर याद दिलाऊँगी।", "ur": "ریمائنڈر لگا دیا ہے — میں وقت پر یاد دلاؤں گی۔", "pa": "ਰਿਮਾਇੰਡਰ ਲਗਾ ਦਿੱਤਾ ਹੈ — ਮੈਂ ਸਮੇਂ 'ਤੇ ਯਾਦ ਦਿਵਾਵਾਂਗੀ।", "ur_roman": "Reminder laga diya hai — main waqt par yaad dila doongi.", "en": "Reminder set — I'll remind you on time."},
             }
             return proactive + templates[understanding.intent].get(lang, templates[understanding.intent]["en"]), understanding
 
@@ -315,7 +391,7 @@ class ZoyaBrain:
             prefs = ctx.get("preferences", {})
             if prefs:
                 thing = next(iter(prefs.values()))
-                return proactive + {"hi": f"वैसे मुझे याद है तुम्हें {thing} पसंद है — आज उसके बारे में बात करें?", "ur": f"ویسے مجھے یاد ہے تمہیں {thing} پسند ہے — آج اس کے بارے میں بات کریں؟", "pa": f"ਵੈਸੇ ਮੈਨੂੰ ਯਾਦ ਹੈ ਤੁਹਾਨੂੰ {thing} ਪਸੰਦ ਹੈ — ਅੱਜ ਉਸ ਬਾਰੇ ਗੱਲ ਕਰੀਏ?", "en": f"By the way, I remember you like {thing} — shall we talk about it today?"}.get(lang, ""), understanding
+                return proactive + {"hi": f"वैसे मुझे याद है तुम्हें {thing} पसंद है — आज उसके बारे में बात करें?", "ur": f"ویسے مجھے یاد ہے تمہیں {thing} پسند ہے — آج اس کے بارے میں بات کریں؟", "pa": f"ਵੈਸੇ ਮੈਨੂੰ ਯਾਦ ਹੈ ਤੁਹਾਨੂੰ {thing} ਪਸੰਦ ਹੈ — ਅੱਜ ਉਸ ਬਾਰੇ ਗੱਲ ਕਰੀਏ?", "ur_roman": f"Waise mujhe yaad hai tumhe {thing} pasand hai — aaj is ke baare mein baat karein?", "en": f"By the way, I remember you like {thing} — shall we talk about it today?"}.get(lang, ""), understanding
 
         return proactive + self._t(FALLBACK), understanding
 

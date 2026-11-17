@@ -31,7 +31,10 @@ class Settings(BaseSettings):
 
     voice_engine: str = "stub"
     voice_default_language: str = "hi"
-    zoya_languages: str = "hi,ur,pa,en"
+    # "ur_roman" = Roman Urdu (Latin script) — the user writes Roman Urdu,
+    # and the (Latin-script) TTS voice can only pronounce Latin-script
+    # replies. See detect_prompt_language() in app/services/conversation.py.
+    zoya_languages: str = "hi,ur,pa,en,ur_roman"
     zoya_personality: str = "friendly,witty,supportive"
 
     backup_dir: str = "./backups"

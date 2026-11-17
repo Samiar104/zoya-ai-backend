@@ -4,6 +4,8 @@ The remix app talks to POST /api/chat with a device handshake (no JWT, no
 user login) and expects {"reply": ...} back. See app/routers/remix_compat.py.
 """
 
+import re
+
 DEVICE_HEADERS = {
     "X-Zoya-Device-ID": "zoya-device-test-1",
     "Authorization": "Bearer zoya-device-test-1",
@@ -74,3 +76,53 @@ def test_api_health_alias(client):
     r = client.get("/api/health")
     assert r.status_code == 200
     assert r.json()["status"] == "ok"
+
+
+def test_api_chat_roman_urdu_prompt_gets_roman_urdu_reply(client):
+    # The user writes Roman Urdu; the reply must be Latin script so the
+    # app's en-IN TTS voice can pronounce it naturally (Urdu script read
+    # by a Latin-script voice sounds robotic).
+    r = client.post(
+        "/api/chat",
+        json={"prompt": "salam, kya haal hai", "provider": "google_gemini", "language_mode": "girlfriend_urdu"},
+        headers=DEVICE_HEADERS,
+    )
+    assert r.status_code == 200, r.text
+    reply = r.json()["reply"]
+    assert reply
+    assert not re.search(r"[\u0600-\u06FF\u0900-\u097F\u0A00-\u0A7F]", reply), "reply must be Latin script"
+
+
+def test_api_chat_urdu_script_prompt_gets_urdu_script_reply(client):
+    r = client.post(
+        "/api/chat",
+        json={"prompt": "السلام علیکم", "language_mode": "girlfriend_urdu"},
+        headers=DEVICE_HEADERS,
+    )
+    assert r.status_code == 200, r.text
+    assert re.search(r"[\u0600-\u06FF]", r.json()["reply"])
+
+
+def test_api_chat_english_prompt_gets_english_reply(client):
+    r = client.post(
+        "/api/chat",
+        json={"prompt": "hello", "language_mode": "girlfriend_urdu"},
+        headers=DEVICE_HEADERS,
+    )
+    assert r.status_code == 200, r.text
+    reply = r.json()["reply"]
+    assert reply
+    assert not re.search(r"[\u0600-\u06FF\u0900-\u097F\u0A00-\u0A7F]", reply), "reply must be Latin script"
+
+
+def test_api_chat_roman_urdu_sad_gets_comforting_roman_reply(client):
+    r = client.post(
+        "/api/chat",
+        json={"prompt": "main bohat udas hoon", "language_mode": "girlfriend_urdu"},
+        headers=DEVICE_HEADERS,
+    )
+    assert r.status_code == 200, r.text
+    body = r.json()
+    assert body["emotion"] == "sad"
+    assert body["reply"]
+    assert not re.search(r"[\u0600-\u06FF]", body["reply"]), "reply must be Latin script"

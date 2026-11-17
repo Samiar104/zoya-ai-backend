@@ -28,7 +28,7 @@ LEXICON: dict[str, list[str]] = {
     "sad": [
         "sad", "dukhi", "दुखी", "dukh", "दुख", "cry", "rona", "रोना", "tears", "aansoo",
         "आँसू", "upset", "heartbroken", "dil toot", "दिल टूट", "miss you", "yaad",
-        "याद", "alone", "depressed", "pareshan", "परेशान", "udaas", "उदास", "غم",
+        "याद", "alone", "depressed", "pareshan", "परेशान", "udaas", "udas", "उदास", "غم",
         "gham", "dukhi hoon", "sad hoon", "rona aa raha",
     ],
     "stressed": [

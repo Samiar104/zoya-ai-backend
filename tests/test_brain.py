@@ -80,3 +80,41 @@ def test_voice_status_stub(client, auth_headers):
 def test_voice_stt_stub_returns_501(client, auth_headers):
     r = client.post("/voice/stt", files={"file": ("test.wav", b"RIFF....", "audio/wav")}, headers=auth_headers)
     assert r.status_code == 501
+
+
+def test_detect_prompt_language_roman_urdu():
+    from app.services.conversation import detect_prompt_language
+
+    assert detect_prompt_language("salam, kya haal hai") == "ur_roman"
+    assert detect_prompt_language("tum kaisi ho") == "ur_roman"
+    assert detect_prompt_language("mujhe neend aa rahi hai") == "ur_roman"
+    assert detect_prompt_language("main udas hoon") == "ur_roman"
+    assert detect_prompt_language("youtube kholo") == "ur_roman"
+
+
+def test_detect_prompt_language_native_scripts():
+    from app.services.conversation import detect_prompt_language
+
+    assert detect_prompt_language("السلام علیکم") == "ur"
+    assert detect_prompt_language("नमस्ते, कैसे हो") == "hi"
+    assert detect_prompt_language("ਸਤ ਸ੍ਰੀ ਅਕਾਲ") == "pa"
+
+
+def test_detect_prompt_language_english():
+    from app.services.conversation import detect_prompt_language
+
+    assert detect_prompt_language("hello") == "en"
+    assert detect_prompt_language("open youtube") == "en"
+    assert detect_prompt_language("what is the weather") == "en"
+
+
+def test_roman_urdu_brain_replies_in_roman_urdu():
+    import re
+
+    from app.services.conversation import ZoyaBrain
+
+    brain = ZoyaBrain(language="ur_roman", mode="companion")
+    reply, understanding = brain.reply("salam, kya haal hai")
+    assert reply
+    assert not re.search(r"[\u0600-\u06FF]", reply), "reply must be Latin script"
+    assert understanding.intent == "greeting"
